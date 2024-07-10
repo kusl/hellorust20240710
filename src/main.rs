@@ -1,3 +1,6 @@
+mod add;
+
+use add::add;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
@@ -31,5 +34,8 @@ fn main() {
                 break;
             }
         }
+
+        let sum = add(guess as i32, secret_number as i32);
+        println!("Sum of your guess and the secret number is: {sum}");
     }
 }
